@@ -19,13 +19,13 @@ def consumer():
 
 thread = Thread(target=consumer).start()
 
-exqueue.put(object())  # 첫 번째로 완료
+exqueue.put(object())
 print('[Producer] Put into Queue 1st')
 
-exqueue.put(object())  # 두 번째로 완료
+exqueue.put(object())
 print('[Producer] Put into Queue 2nd')
 
-exqueue.join()  # 네 번째로 완료
+exqueue.join()
 print('[Producer] stand by')
 
 
