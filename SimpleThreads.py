@@ -1,7 +1,6 @@
 from queue import Queue
 from threading import Thread
 
-
 exqueue = Queue(1)  # Size 1 queue box, let's change 1 ~ 40
 
 def consumer():
@@ -13,15 +12,12 @@ def consumer():
         # ~~~
 
         exqueue.task_done()  # If task_done(), producer does not have to queue or poll consuming threads with joins.
-
-
         print('[Consumer] Processing Done')
 
 thread = Thread(target=consumer).start()
 
 exqueue.put(object())
 print('[Producer] Put into Queue 1st')
-
 exqueue.put(object())
 print('[Producer] Put into Queue 2nd')
 
