@@ -11,5 +11,6 @@ Python Queue class can handle process blocking, buffer size, join and provides t
 ## Implementation
 
 This example needed [`python3`](https://www.python.org/downloads/) 
+Let's find implementation how to use thread python Queue. https://github.com/hyeonsangjeon/youtube-dl-nas
 
 
